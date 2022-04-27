@@ -1,0 +1,48 @@
+{{#if session.loggedin}}
+<a href="/create">
+    <button class="btn btn-primary mb-4">Adicionar novo carro alugado</button>
+</a>
+{{else}}
+<button class="btn btn-primary mb-4" disabled="true">Faça login para adicionar novos carros</button>
+{{/if}}
+
+<section class="main-container">
+    {{#if rentedCars}}
+    {{#each rentedCars}}
+    <div class="card-cars">
+        <img class="image" src="images/{{dataValues.image}}" alt="Nenhuma imagem foi selecionada" srcset="">
+        <span class="manufacturer">Fabricante: {{dataValues.manufacturer}}</span>
+        <span class="model mb-3">Modelo: {{dataValues.model}}</span>
+
+
+
+
+        <div>
+            <a href="/showCar/{{dataValues.id}}">
+                <button class="btn btn-primary">Acessar</button>
+            </a>
+
+            {{#if ../session.loggedin}}
+            <a href="edit/{{dataValues.id}}">
+                <button class="btn btn-secondary">Editar</button>
+            </a>
+            <a href="delete/{{dataValues.id}}">
+                <button class="btn btn-danger">Excluir</button>
+            </a>
+            {{else}}
+            <p>Faça login para edição ou exclusão</p>
+            {{/if}}
+        </div>
+
+
+    </div>
+    {{/each}}
+    {{else}}
+    
+        {{#if session.loggedin}}
+            <h2>Não há carros alugados, <a href="create">adicione aqui</a></h2>
+        {{else}}
+            <h2>Não há carros alugados, <a href="register">logue ao sistema</a> <a> e <a href="create">adicione aqui</a></h2>
+        {{/if}}
+    {{/if}}
+</section>

@@ -1,0 +1,26 @@
+{
+  "name": "backup-trabalho5",
+  "version": "1.0.0",
+  "description": "Projeto feito por Bruno Ósio",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "app-root-path": "^3.0.0",
+    "bcryptjs": "^2.4.3",
+    "express": "^4.18.0",
+    "express-handlebars": "^6.0.5",
+    "express-session": "^1.17.2",
+    "formidable": "^2.0.1",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.19.0"
+  }
+}

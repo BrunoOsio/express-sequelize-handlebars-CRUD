@@ -1,0 +1,26 @@
+<form action="/api/edit/{{rentedCar.dataValues.id}}" enctype="multipart/form-data" method="POST">
+
+    <input type="hidden" name="oldRentedCarId" value="{{rentedCar.dataValues.id}}">
+
+    <article class="form-group">
+        <label>Fabricante</label>
+        <input class="form-control" type="text" name="manufacturer" value="{{rentedCar.dataValues.manufacturer}}">
+    </article>
+
+    <article class="form-group">
+        <label>Modelo</label>
+        <input class="form-control" type="text" name="model" value="{{rentedCar.dataValues.model}}" required> 
+    </article>
+
+    <article class="form-group">
+        <label>Descrição</label>
+        <textarea class="form-control" rows="3" name="description" required>{{rentedCar.dataValues.description}}</textarea>
+    </article>
+
+    <article class="form-group">
+        <label>Imagem</label>
+        <input type="file" class="form-control-file" name="image">
+    </article>
+
+    <button class="btn btn-primary mb-5" type="submit">Editar</button>
+</form>

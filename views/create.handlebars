@@ -1,0 +1,24 @@
+<form action="api/create" enctype="multipart/form-data" method="POST">
+
+    <article class="form-group">
+        <label>Fabricante</label>
+        <input class="form-control" type="text" name="manufacturer" required>
+    </article>
+
+    <article class="form-group">
+        <label>Modelo</label>
+        <input class="form-control" type="text" name="model" required>
+    </article>
+
+    <article class="form-group">
+        <label>Descrição</label>
+        <textarea class="form-control" rows="3" name="description" required></textarea>
+    </article>
+
+    <article class="form-group">
+        <label>Imagem</label>
+        <input type="file" class="form-control-file" name="image">
+    </article>
+
+    <button class="btn btn-primary mb-5" type="submit">Adicionar</button>
+</form>
